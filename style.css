@@ -1,0 +1,435 @@
+   * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: #ede8f7;
+            color: #1e1730;
+            min-height: 100vh;
+        }
+
+        /* navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            padding: 1rem 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ffffff;
+            box-shadow: 0 8px 18px #cbb9f0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo a {
+            font-weight: 800;
+            font-size: 1.8rem;
+            background: linear-gradient(130deg, #3f2b7a, #9370db);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #362b52;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.3rem 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+
+        .nav-links a i {
+            color: #725fbb;
+        }
+
+        .nav-links a:hover {
+            border-bottom-color: #a58ae6;
+            color: #1f1242;
+        }
+
+        /* main container */
+        .page-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem 3rem;
+        }
+
+        /* --- page 1: portfolio landing (exactly four fields) --- */
+        .landing-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border-radius: 3rem;
+            box-shadow: 0 30px 50px -10px #8f7ac0, 0 0 0 1px #fff inset;
+            padding: 2.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 2rem;
+        }
+
+        .hero {
+            padding-right: 0.5rem;
+        }
+
+        .avatar-symbol {
+            font-size: 5rem;
+            background: #ffffffd0;
+            width: fit-content;
+            padding: 0.6rem 1.8rem 0.2rem 1.8rem;
+            border-radius: 6rem 6rem 3rem 3rem;
+            box-shadow: 0 12px 16px #b19de0;
+            border: 3px solid white;
+            transform: rotate(-2deg);
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #1f1740;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(145deg, #543ca7, #b293f0);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .tagline {
+            background: #ffffffc0;
+            padding: 1rem 2rem;
+            border-radius: 3rem;
+            border-left: 8px solid #9b87de;
+            font-weight: 500;
+            margin: 1.8rem 0;
+        }
+
+        .student-badge {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .badge-item {
+            background: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 40px;
+            font-weight: 600;
+            box-shadow: 0 4px 10px #b09bdd;
+        }
+
+        /* right panel: exactly name / student# / course / about you */
+        .info-panel {
+            background: #ffffffd5;
+            backdrop-filter: blur(4px);
+            border-radius: 2.8rem;
+            padding: 2rem 2.2rem 2.5rem;
+            box-shadow: 0 20px 40px -12px #7c64c0;
+            border: 1px solid white;
+        }
+
+        .info-panel h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            border-bottom: 3px dashed #c2adf3;
+            padding-bottom: 0.8rem;
+            display: flex;
+            gap: 0.5rem;
+            color: #322959;
+        }
+
+        .detail-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .detail-item {
+            border-bottom: 1px solid #e2d3ff;
+            padding-bottom: 0.6rem;
+        }
+
+        .detail-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #6c54b0;
+        }
+
+        .detail-value {
+            font-size: 1.9rem;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .name-value {
+            font-size: 2.3rem;
+            background: linear-gradient(135deg, #351c73, #3b2b68);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .info-about {
+            background: #ede6ff;
+            border-radius: 2rem;
+            padding: 1.5rem;
+            border: 2px solid white;
+        }
+
+        .info-about p:first-child {
+            font-weight: 600;
+            color: #3e2b78;
+            margin-bottom: 0.8rem;
+        }
+
+        .bio-text {
+            background: #ffffffb5;
+            padding: 1rem 1.5rem;
+            border-radius: 1.5rem;
+            border: 1px dashed #a78fe0;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #c2adf3, transparent);
+            margin: 2rem 0 0.8rem;
+        }
+
+        /* --- PAGE 2: TAKEN QUIZ UPLOAD (NO QUESTIONS, JUST UPLOAD + HISTORY) --- */
+        .quiz-container {
+            background: #ffffffea;
+            backdrop-filter: blur(6px);
+            border-radius: 3rem;
+            padding: 2.5rem 3rem;
+            box-shadow: 0 25px 40px -12px #8f7aca;
+            border: 1px solid white;
+        }
+
+        .quiz-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2.2rem;
+        }
+
+        .quiz-header h2 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            background: linear-gradient(145deg, #3b2679, #7c5fd1);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .quiz-header i {
+            font-size: 2.8rem;
+            color: #755fd3;
+        }
+
+        /* image upload (for taken quiz picture) */
+        .image-upload-area {
+            background: #f6f0ff;
+            border-radius: 2.5rem;
+            padding: 2rem 2rem 1.8rem;
+            margin-bottom: 2.5rem;
+            border: 2px dashed #b39df2;
+            text-align: center;
+        }
+
+        .image-upload-area p {
+            font-weight: 600;
+            color: #3e2c70;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .image-upload-area input[type="file"] {
+            background: white;
+            padding: 0.9rem 2rem;
+            border-radius: 4rem;
+            border: 1px solid #ab92ec;
+            width: 100%;
+            max-width: 380px;
+            margin: 1rem auto;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .preview-box {
+            margin-top: 1.2rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .preview-box img {
+            max-width: 180px;
+            max-height: 160px;
+            border-radius: 28px;
+            border: 4px solid white;
+            box-shadow: 0 10px 18px #b39de0;
+            object-fit: cover;
+        }
+
+        /* ---------- TAKEN QUIZ LIST (no questions, just records) ---------- */
+        .taken-quiz-section {
+            background: #eee5ff;
+            border-radius: 2.5rem;
+            padding: 2rem 2.2rem;
+            margin: 2rem 0 1.2rem;
+            border: 1px solid #ffffff;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #2f2160;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title i {
+            font-size: 1.9rem;
+            background: #daceff;
+            padding: 0.3rem;
+            border-radius: 50%;
+        }
+
+        /* quiz record cards — exactly 'taken quiz' items */
+        .quiz-taken-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .quiz-record {
+            background: white;
+            border-radius: 2rem;
+            padding: 1.4rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 6px 14px #c7b5f0;
+            border: 1px solid #f3ecff;
+            transition: 0.1s;
+        }
+
+        .quiz-record:hover {
+            background: #faf6ff;
+            border-color: #b29cf5;
+        }
+
+        .quiz-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        .quiz-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #2b1c56;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .quiz-meta {
+            display: flex;
+            gap: 1.8rem;
+            font-size: 0.95rem;
+            color: #604d95;
+        }
+
+        .quiz-meta span i {
+            margin-right: 4px;
+            color: #816ed3;
+        }
+
+        .quiz-score {
+            background: #e0d2ff;
+            padding: 0.6rem 1.5rem;
+            border-radius: 3rem;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #2f1b71;
+            box-shadow: inset 0 2px 6px #f1eaff;
+        }
+
+        .upload-indicator {
+            margin-left: 0.5rem;
+            color: #5e47a3;
+        }
+
+        /* button to simulate adding taken quiz (demo purpose) */
+        .action-buttons {
+            display: flex;
+            gap: 1.2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background: white;
+            border: 2px solid #8d74d4;
+            padding: 0.8rem 2rem;
+            border-radius: 3rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+
+        .btn-primary {
+            background: #6d52c3;
+            border-color: #4d359b;
+            color: white;
+            box-shadow: 0 6px 12px #b09de0;
+        }
+
+        .btn-primary:hover {
+            background: #583fa8;
+        }
+
+        .btn:hover {
+            background: #ece2ff;
+        }
+
+        .footer-note {
+            margin-top: 2.5rem;
+            text-align: center;
+            color: #6a56a3;
+        }

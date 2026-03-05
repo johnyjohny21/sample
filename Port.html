@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio · taken quiz upload (no questions)</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- tiny page switching script (keeps navbar interaction) -->
+    <script>
+        function showPage(pageId) {
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('quiz-page').style.display = 'none';
+            document.getElementById(pageId).style.display = 'block';
+        }
+        window.onload = function() {
+            showPage('home-page');
+        };
+    </script>
+</head>
+<body>
+    <!-- shared navigation -->
+    <nav class="navbar">
+        <div class="logo"><a href="#" onclick="showPage('home-page'); return false;">📁 portfolio</a></div>
+        <div class="nav-links">
+            <a href="#" onclick="showPage('home-page'); return false;"><i class="fas fa-home"></i> home</a>
+            <a href="#" onclick="showPage('quiz-page'); return false;"><i class="fas fa-pencil-alt"></i> taken quiz</a>
+            <a href="#" onclick="showPage('quiz-page'); return false;"><i class="fas fa-upload"></i> upload</a>
+        </div>
+    </nav>
+
+    <!-- PAGE 1: LANDING (exact fields: name, student number, course section, info about you) -->
+    <div id="home-page" class="page-container" style="display: block;">
+        <div class="landing-card">
+            <div class="grid">
+                <div class="hero">
+                    <div class="avatar-symbol">🧑🏽‍🎓</div>
+                    <h1><span>student</span><br>portfolio</h1>
+                    <div class="tagline">✦ identity · code · design ✦</div>
+                    <div class="student-badge">
+                        <span class="badge-item">✦ creative</span>
+                        <span class="badge-item">✦ developer</span>
+                        <span class="badge-item">✦ class 2026</span>
+                    </div>
+                </div>
+                <div class="info-panel">
+                    <h2><i class="fas fa-id-card" style="color:#6b4ec5;"></i> profile</h2>
+                    <div class="detail-list">
+                        <!-- 1. NAME -->
+                        <div class="detail-item">
+                            <span class="detail-label">Name</span>
+                            <span class="detail-value name-value">Johneros Puyo <span style="font-size:1.2rem; font-weight:400;">(he/male)</span></span>
+                        </div>
+                        <!-- 2. STUDENT NUMBER -->
+                        <div class="detail-item">
+                            <span class="detail-label">Student number</span>
+                            <span class="detail-value">S‑2247‑09 · 224709</span>
+                        </div>
+                        <!-- 3. COURSE SECTION -->
+                        <div class="detail-item">
+                            <span class="detail-label">Course Section</span>
+                            <span class="detail-value">DSGN 410 · section F</span>
+                        </div>
+                    </div>
+                    <!-- 4. INFORMATION ABOUT YOU -->
+                    <div class="info-about">
+                        <p><i class="fas fa-user-pen"></i> Information about you</p>
+                        <div class="bio-text">
+                            multidisciplinary designer & front-end explorer.<br>
+                            seattle / miami · thesis on digital storytelling.<br>
+                            passionate about inclusive interfaces & motion.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div style="text-align:center; color:#6e5aab;">Name · Student# · Course · About you  (exactly as image)</div>
+        </div>
+    </div>
+
+    <!-- PAGE 2: TAKEN QUIZ UPLOAD (no questions, only taken quiz records + image upload) -->
+    <div id="quiz-page" class="page-container" style="display: none;">
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <i class="fas fa-file-alt"></i>
+                <h2>taken quizzes · upload</h2>
+            </div>
+
+            <!-- IMAGE UPLOAD (for picture of taken quiz) -->
+            <div class="image-upload-area">
+                <p><i class="fas fa-cloud-upload-alt" style="margin-right: 8px;"></i> upload a picture of your taken quiz</p>
+                <input type="file" id="quizImageInput" accept="image/png, image/jpeg, image/gif, image/webp" onchange="previewQuizImage(event)">
+                <small>PNG, JPG, GIF, WEBP — shows preview below</small>
+                <div class="preview-box" id="quizPreview">
+                    <!-- image preview appears here -->
+                </div>
+            </div>
+
+            <!-- TAKEN QUIZ LIST (records, NO questions) -->
+            <div class="taken-quiz-section">
+                <div class="section-title">
+                    <i class="fas fa-clock-rotate-left"></i> recently taken quizzes
+                </div>
+                <div class="quiz-taken-list" id="takenQuizList">
+                    <!-- static examples of taken quizzes (these are records, not questions) -->
+                    <div class="quiz-record">
+                        <div class="quiz-info">
+                            <div class="quiz-title"><i class="fas fa-pen-to-square" style="color:#6a4fc5;"></i> midterm exam · design systems</div>
+                            <div class="quiz-meta">
+                                <span><i class="fas fa-calendar"></i> may 12, 2026</span>
+                                <span><i class="fas fa-file-pdf"></i> scanned_quiz.pdf</span>
+                            </div>
+                        </div>
+                        <div class="quiz-score">92%</div>
+                    </div>
+                    <div class="quiz-record">
+                        <div class="quiz-info">
+                            <div class="quiz-title"><i class="fas fa-pen-to-square" style="color:#6a4fc5;"></i> typography quiz · week 7</div>
+                            <div class="quiz-meta">
+                                <span><i class="fas fa-calendar"></i> april 28, 2026</span>
+                                <span><i class="fas fa-image"></i> taken_quiz.jpg</span>
+                            </div>
+                        </div>
+                        <div class="quiz-score">88%</div>
+                    </div>
+                    <div class="quiz-record">
+                        <div class="quiz-info">
+                            <div class="quiz-title"><i class="fas fa-pen-to-square" style="color:#6a4fc5;"></i> final activity · html & css</div>
+                            <div class="quiz-meta">
+                                <span><i class="fas fa-calendar"></i> june 02, 2026</span>
+                                <span><i class="fas fa-file-image"></i> activity_scan.png</span>
+                            </div>
+                        </div>
+                        <div class="quiz-score">95%</div>
+                    </div>
+                </div>
+
+                <!-- note: no questions anywhere, just taken quiz records and upload -->
+                <div style="margin-top: 2rem; background: #e7daff; padding: 1rem 1.5rem; border-radius: 3rem; color:#3f2f72; font-weight:500;">
+                    <i class="fas fa-check-circle" style="color:#5e46b1;"></i>  you have uploaded 3 taken quizzes (image upload simulates adding more)
+                </div>
+            </div>
+
+            <!-- UPLOAD / DEMO BUTTON (adds a new taken quiz record to show dynamic update) -->
+            <div class="action-buttons">
+                <button class="btn btn-primary" onclick="addTakenQuiz()"><i class="fas fa-plus-circle"></i> add taken quiz (demo)</button>
+                <button class="btn" onclick="document.getElementById('quizImageInput').value=''; document.getElementById('quizPreview').innerHTML='';"><i class="fas fa-trash-alt"></i> clear upload</button>
+            </div>
+
+            <div class="footer-note">
+                <i class="fas fa-arrow-up"></i> upload a picture of your taken quiz – it appears above.<br>
+                <span style="background:#e4d9ff; padding:0.3rem 1rem; border-radius:60px; display:inline-block; margin-top:0.6rem;"></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // preview for quiz image upload
+        function previewQuizImage(event) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const previewDiv = document.getElementById('quizPreview');
+                previewDiv.innerHTML = `<img src="${reader.result}" alt="taken quiz preview">`;
+            };
+            if (event.target.files[0]) {
+                reader.readAsDataURL(event.target.files[0]);
+            } else {
+                document.getElementById('quizPreview').innerHTML = '';
+            }
+        }
+
+        // function to simulate "adding a taken quiz" (dynamic update, no questions)
+        function addTakenQuiz() {
+            const list = document.getElementById('takenQuizList');
+            const newRecord = document.createElement('div');
+            newRecord.className = 'quiz-record';
+            // random score between 75 and 98
+            const score = Math.floor(Math.random() * 20) + 78;
+            const months = ['jan','feb','mar','apr','may','jun','jul','aug','sep'];
+            const randomMonth = months[Math.floor(Math.random() * months.length)] + ' ' + (Math.floor(Math.random()*20)+1);
+            newRecord.innerHTML = `
+                <div class="quiz-info">
+                    <div class="quiz-title"><i class="fas fa-pen-to-square" style="color:#6a4fc5;"></i> quiz upload · ${randomMonth}</div>
+                    <div class="quiz-meta">
+                        <span><i class="fas fa-calendar"></i> ${randomMonth}, 2026</span>
+                        <span><i class="fas fa-image"></i> taken_quiz_upload.png</span>
+                    </div>
+                </div>
+                <div class="quiz-score">${score}%</div>
+            `;
+            list.appendChild(newRecord);
+        }
+
+        // ensure page switching works after dynamic updates
+        window.showPage = function(pageId) {
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('quiz-page').style.display = 'none';
+            document.getElementById(pageId).style.display = 'block';
+        };
+    </script>
+    <!-- note: second page contains zero quiz questions — exactly "taken quiz" records + upload image -->
+</body>
+</html>
